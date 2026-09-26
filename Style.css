@@ -2,113 +2,319 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background: #f4f7fb;
+    background: #f6f8fb;
     color: #1f2937;
     line-height: 1.6;
 }
 
-header {
-    background: #0f4c81;
-    color: white;
-    padding: 20px 8%;
+/* Header */
+.topbar {
+    background: #dc2626;
+    color: #ffffff;
+    padding: 22px 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
-header h1 {
-    font-size: 24px;
+.topbar h1 {
+    font-size: 28px;
+    margin-bottom: 4px;
 }
 
-nav a {
-    color: white;
+.topbar p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.user-info {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Navigation */
+.navbar {
+    background: #ffffff;
+    padding: 15px 7%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar a {
+    color: #374151;
     text-decoration: none;
-    margin-left: 20px;
-    font-weight: 500;
+    padding: 9px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
 }
 
+.navbar a:hover {
+    background: #fee2e2;
+    color: #dc2626;
+}
+
+/* Main Container */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 30px auto;
+    width: 86%;
+    max-width: 1250px;
+    margin: 35px auto;
 }
 
-.dashboard {
+/* Section Title */
+.section-title {
+    margin-bottom: 22px;
+}
+
+.section-title h2 {
+    font-size: 25px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+.section-title p {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* Dashboard */
+#dashboard {
+    margin-bottom: 45px;
+}
+
+.dashboard-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
 .card {
-    background: white;
-    padding: 25px;
+    background: #ffffff;
+    padding: 24px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+}
+
+.card-icon {
+    font-size: 28px;
+    margin-bottom: 12px;
 }
 
 .card h3 {
-    color: #0f4c81;
-    margin-bottom: 10px;
+    color: #4b5563;
+    font-size: 15px;
+    margin-bottom: 8px;
 }
 
-button {
-    background: #0f4c81;
-    color: white;
+.number {
+    color: #dc2626;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Content Sections */
+.content-section {
+    margin-bottom: 45px;
+}
+
+/* Forms */
+.form-card {
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    outline: none;
+    background: #ffffff;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 3px #fee2e2;
+}
+
+/* Buttons */
+.primary-btn {
+    background: #dc2626;
+    color: #ffffff;
     border: none;
     padding: 12px 20px;
-    border-radius: 6px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
+    align-self: end;
 }
 
-button:hover {
-    background: #083b63;
+.primary-btn:hover {
+    background: #b91c1c;
+    transform: translateY(-1px);
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: white;
+/* Lists */
+.list-card,
+.info-card,
+.receipt-card {
+    background: #ffffff;
     margin-top: 20px;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
-th, td {
-    padding: 14px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
+.list-card h3 {
+    margin-bottom: 15px;
+    color: #111827;
 }
 
-th {
-    background: #0f4c81;
-    color: white;
+.empty-message {
+    color: #9ca3af;
+    font-size: 14px;
 }
 
+#policyList p,
+#paymentHistory p {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: #f9fafb;
+    border-left: 4px solid #dc2626;
+    border-radius: 5px;
+}
+
+.info-card {
+    border-left: 5px solid #dc2626;
+}
+
+.info-card h3 {
+    margin-bottom: 8px;
+}
+
+/* Receipt */
+.receipt-card:empty {
+    display: none;
+}
+
+.receipt-card h3 {
+    color: #dc2626;
+    margin-bottom: 12px;
+}
+
+.receipt-card p {
+    margin: 6px 0;
+}
+
+/* Footer */
 footer {
+    background: #111827;
+    color: #d1d5db;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    background: #0f4c81;
-    color: white;
+    padding: 22px;
+    margin-top: 50px;
+    font-size: 13px;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
+/* Tablet */
+@media (max-width: 1000px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .dashboard {
+    .form-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+
+    .topbar {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar h1 {
+        font-size: 22px;
+    }
+
+    .navbar {
+        padding: 12px 20px;
+    }
+
+    .navbar a {
+        font-size: 13px;
+        padding: 7px 9px;
+    }
+
+    .container {
+        width: 92%;
+        margin: 25px auto;
+    }
+
+    .dashboard-grid {
         grid-template-columns: 1fr;
     }
 
-    nav a {
-        margin: 5px;
+    .form-card {
+        grid-template-columns: 1fr;
     }
 
-    table {
-        font-size: 14px;
+    .section-title h2 {
+        font-size: 21px;
+    }
+
+    .primary-btn {
+        width: 100%;
     }
 }
