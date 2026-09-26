@@ -80,7 +80,8 @@
                 <p>Add and manage insurance policy holders</p>
             </div>
 
-            <form id="policyForm" class="form-card">
+           <form id="policyForm" class="form-card" 
+            onsubmit="event.preventDefault(); addPolicyHolder();">
 
                 <div class="form-group">
                     <label for="holderName">Policy Holder Name</label>
@@ -135,7 +136,8 @@
                 <p>Record and manage premium payments</p>
             </div>
 
-            <form id="paymentForm" class="form-card">
+           <form id="paymentForm" class="form-card"
+            onsubmit="event.preventDefault(); recordPayment();">
 
                 <div class="form-group">
                     <label for="paymentPolicy">Policy Number</label>
