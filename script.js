@@ -99,7 +99,7 @@ function generateReceipt() {
 
 // Update Dashboard
 function updateDashboard() {
-    const totalHolders = document.getElementById("totalHolders");
+    const totalHolders = document.getElementById("totalPolicy");
     const totalCollection = document.getElementById("totalCollection");
     const pendingPayments = document.getElementById("pendingPayments");
     const upcomingDues = document.getElementById("upcomingDues");
