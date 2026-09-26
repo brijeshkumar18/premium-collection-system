@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Collection System</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Premium Collection System</h1>
+        <p>Insurance Premium Collection & Payment Tracking</p>
+    </header>
+
+    <nav>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#policy">Policy Holders</a>
+        <a href="#payment">Premium Payment</a>
+        <a href="#installment">Installments</a>
+        <a href="#receipt">Receipts</a>
+        <a href="#history">Payment History</a>
+    </nav>
+
+    <main>
+
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div>
+                <h3>Total Policy Holders</h3>
+                <p id="totalPolicy">0</p>
+            </div>
+
+            <div>
+                <h3>Total Collection</h3>
+                <p id="totalCollection">₹0</p>
+            </div>
+
+            <div>
+                <h3>Pending Payments</h3>
+                <p id="pendingPayments">0</p>
+            </div>
+
+            <div>
+                <h3>Upcoming Dues</h3>
+                <p id="upcomingDues">0</p>
+            </div>
+        </section>
+
+        <section id="policy">
+            <h2>Policy Holder Management</h2>
+
+            <form id="policyForm">
+                <input type="text" id="holderName"
+                    placeholder="Policy Holder Name" required>
+
+                <input type="text" id="policyNumber"
+                    placeholder="Policy Number" required>
+
+                <input type="number" id="premiumAmount"
+                    placeholder="Premium Amount" required>
+
+                <button type="submit">Add Policy Holder</button>
+            </form>
+
+            <div id="policyList"></div>
+        </section>
+
+        <section id="payment">
+            <h2>Premium Payment</h2>
+
+            <form id="paymentForm">
+                <input type="text" id="paymentPolicy"
+                    placeholder="Policy Number" required>
+
+                <input type="number" id="paymentAmount"
+                    placeholder="Payment Amount" required>
+
+                <select id="paymentMethod">
+                    <option value="">Select Payment Method</option>
+                    <option>Cash</option>
+                    <option>UPI</option>
+                    <option>Card</option>
+                    <option>Bank Transfer</option>
+                </select>
+
+                <button type="submit">Record Payment</button>
+            </form>
+        </section>
+
+        <section id="installment">
+            <h2>Installment Tracking</h2>
+            <p>Track premium installments and payment status.</p>
+        </section>
+
+        <section id="receipt">
+            <h2>Receipt Generation</h2>
+            <button onclick="generateReceipt()">Generate Receipt</button>
+            <div id="receiptArea"></div>
+        </section>
+
+        <section id="history">
+            <h2>Payment History</h2>
+            <div id="paymentHistory"></div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Premium Collection System | Web Development Internship</p>
+    </footer>
+
+</body>
+</html>
