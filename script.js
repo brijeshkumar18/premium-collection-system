@@ -39,7 +39,7 @@ function addPolicyHolder() {
 
 // Record Payment
 function recordPayment() {
-    const policyNumber = document.getElementById("paymentPolicyNumber").value.trim();
+    const policyNumber = document.getElementById("paymentPolicy").value.trim();
     const amount = Number(document.getElementById("paymentAmount").value);
     const method = document.getElementById("paymentMethod").value;
 
@@ -64,7 +64,7 @@ function recordPayment() {
         date: new Date().toLocaleDateString()
     });
 
-    document.getElementById("paymentPolicyNumber").value = "";
+    document.getElementById("paymentPolicy").value = "";
     document.getElementById("paymentAmount").value = "";
     document.getElementById("paymentMethod").value = "";
 
