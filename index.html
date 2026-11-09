@@ -189,14 +189,30 @@
                 <p>Monitor premium installments and payment status</p>
             </div>
 
-            <div class="info-card">
-                <h3>Installment Management</h3>
-                <p>
-                    Track upcoming installments, paid installments,
-                    and pending premium payments.
-                </p>
-            </div>
+            <div class="form-card">
+    <h3>Add Installment</h3>
 
+    <form onsubmit="event.preventDefault(); addInstallment();">
+        <input type="text" id="installmentPolicy"
+        placeholder="Enter policy number" required>
+
+        <input type="number" id="installmentAmount"
+        placeholder="Enter installment amount" min="1" required>
+
+        <input type="date" id="installmentDueDate" required>
+
+        <button type="submit" class="primary-btn">
+            Add Installment
+        </button>
+    </form>
+</div>
+
+<div class="list-card">
+    <h3>Installment Records</h3>
+    <div id="installmentList">
+        <p>No installments added yet.</p>
+    </div>
+</div>
         </section>
 
         <!-- Receipt -->
