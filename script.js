@@ -34,7 +34,26 @@ function addPolicyHolder() {
     document.getElementById("premiumAmount").value = "";
 
     updateDashboard();
+    updatePolicyList();
     alert("Policy holder added successfully.");
+}
+function updatePolicyList() {
+    const policyList = document.getElementById("policyList");
+
+    if (!policyList) return;
+
+    if (policyHolders.length === 0) {
+        policyList.innerHTML = "<p>No policy holders added yet.</p>";
+        return;
+    }
+
+    policyList.innerHTML = policyHolders.map(holder => `
+        <div class="card">
+            <h3>${holder.name}</h3>
+            <p><strong>Policy Number:</strong> ${holder.policyNumber}</p>
+            <p><strong>Premium Amount:</strong> ₹${holder.premiumAmount}</p>
+        </div>
+    `).join("");
 }
 
 // Record Payment
